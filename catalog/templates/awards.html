@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши достижения </title>
+    {% load static %}
+   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+   <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <div class="h1">Наши достижения</div>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href = "{% url 'index' %}">Главная</a></li>
+                 <li><a href = "{% url 'coaches' %}">Наши тренеры</a></li>
+                <li><a href = "{% url 'awards' %}">Наши достижения</a></li>
+                <li><a href = "{% url 'fencers' %}">Наши спортсмены</a></li>
+                <li><a href = "{% url 'competitions' %}">Результаты соревнований</a></li>
+            </ul>
+        </div>
+<div class="content">
+    <p>Первенство Красноярского края по фехтованию на шпагах, г.Красноярск, 14.11.2015г.</p>
+    <br></br>
+    <img src="https://sun9-38.userapi.com/c627630/v627630397/23ad9/sBGOarUC91w.jpg" width="525" height="350" alt="pic4">
+    <br></br>
+    <p>Кубок Сибири по фехтованию на шпагах среди женщин, г.Красноярск, 21.10.2015г.</p>
+    <br></br>
+    <img src="https://sun9-72.userapi.com/c630722/v630722397/307c/my_Jk3eVsc4.jpg" width="525" height="350" alt="pic4">
+    <br></br> 
+    <br></br>    
+    </div>
+    <div class="footer">
+        <table>
+            <tr>
+                <td><a href = "{% url 'index' %}">Главная</a></td>
+                <td><a href = "{% url 'raspM' %}">Расписание зала на ул.Малаховской</a></td>
+            </tr>
+            <tr>
+                <td><a href = "{% url 'coaches' %}">Наши тренеры</a></td>
+                <td><a href = "{% url 'raspES' %}">Расписание зала на ул.Е.Стасовой</a></td>
+            </tr>
+            <tr>
+                <td><a href = "{% url 'awards' %}">Наши достижения</a></td>
+                <td><a href = "{% url 'rasp60' %}">Расписание зала на ул.60 лет образования СССР</a></td>
+            </tr>
+            <tr>
+                <td><a href = "{% url 'fencers' %}">Наши спортсмены</a></td>
+                <td><a href = "{% url 'competitions' %}">Результаты соревнований</a></td>  
+            </tr>
+        <table>
+    </div>
+    </div> 
+</body>
+</html>
