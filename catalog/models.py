@@ -101,6 +101,9 @@ class Fencer(models.Model):
     sportclub = models.ForeignKey('Sportclub', on_delete=models.SET_NULL, null=True)
     rate = models.IntegerField()
 
+    class Meta:
+        ordering = ['-rate']
+
     def __str__(self):
         """
         """
@@ -144,6 +147,9 @@ class Result(models.Model):
     fencer = models.ForeignKey('Fencer', on_delete=models.SET_NULL, null=True)
     competition = models.ForeignKey('Competition', on_delete=models.SET_NULL, null=True)
     result = models.IntegerField()
+
+    class Meta:
+        ordering = ['result',]
 
     def __str__(self):
         """

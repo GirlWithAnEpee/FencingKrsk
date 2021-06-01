@@ -35,6 +35,16 @@
         <p><strong>Тренер:</strong> {{ fencer.coach }}</p>
         <p><strong>Спортклуб:</strong> {{ fencer.sportclub }}</p>
         <p><strong>Очки рейтинга:</strong> {{ fencer.rate }}</p>
+        <p><strong>Результаты:</strong></p>
+        <ul>
+            {% for res in fencer.result_set.all %}
+            <li>
+              
+              <a href="{{ res.competition.get_absolute_url }}">{{ res.competition.title }} </a>, г.{{ res.competition.place.city }}, {{ res.competition.datestart }} - {{ res.result}} место
+             </li>
+            {% endfor %}
+      
+          </ul>
     </div>
     <div class="sidebar">
         <h3>Адреса спортзалов</h3>
@@ -43,12 +53,7 @@
             <li>Елены Стасовой 69/л</li>
             <li>60 лет образования СССР, 17</li>
         </ul>
-        <div class="search">
-            <form>
-            <input type="text" placeholder="Поиск по сайту">
-            <button type="submit"></button>
-            </form>
-          </div>
+        
     </div>
 </div>
 <div class="footer">

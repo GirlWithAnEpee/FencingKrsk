@@ -36,7 +36,16 @@
         <p><strong>Место проведения:</strong> {{ competition.place }}</p>
         <p><strong>Дата начала:</strong> {{ competition.datestart }}</p>
         <p><strong>Дата окончания:</strong> {{ competition.dateend }}</p>
-        <a href = "{% url 'results' %}">Результаты</a>
+        <p><strong>Результаты:</strong></p>
+        <ul>
+            {% for res in competition.result_set.all %}
+            <li>
+              
+              {{ res.result}} место - <a href="{{ res.fencer.get_absolute_url }}">{{ res.fencer.surname }} {{res.fencer.name}}</a>, тренер {{res.fencer.coach}}
+             </li>
+            {% endfor %}
+      
+          </ul>
     </div>  
     <div class="sidebar">
         <h3>Адреса спортзалов</h3>
@@ -45,12 +54,6 @@
             <li>Елены Стасовой 69/л</li>
             <li>60 лет образования СССР, 17</li>
         </ul>
-        <div class="search">
-            <form>
-            <input type="text" placeholder="Поиск по сайту">
-            <button type="submit"></button>
-            </form>
-          </div>
     </div>
 </div>
 <div class="footer">

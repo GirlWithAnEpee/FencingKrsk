@@ -33,7 +33,7 @@
 
       {% for competition in competition_list %}
       <li>
-        <a href="{{ competition.get_absolute_url }}">{{ competition.title}}</a>
+        <a href="{{ competition.get_absolute_url }}">{{ competition.title}}</a>, {{competition.datestart}}-{{competition.dateend}}, г.{{competition.place.city}}
       </li>
       {% endfor %}
 
@@ -49,13 +49,7 @@
             <li>Елены Стасовой 69/л</li>
             <li>60 лет образования СССР, 17</li>
         </ul>
-        <div class="search">
-            <form>
-            <input type="text" placeholder="Поиск по сайту">
-            <button type="submit"></button>
-            </form>
-          </div>
-    </div>
+   </div>
 </div>
 <div class="footer">
     <table>

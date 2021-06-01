@@ -33,7 +33,7 @@
 
       {% for fencer in fencer_list %}
       <li>
-        <a href="{{ fencer.get_absolute_url }}">{{ fencer.surname }} {{fencer.name}}</a> 
+        <a href="{{ fencer.get_absolute_url }}">{{ fencer.surname }} {{fencer.name}}</a>, {{fencer.birthday}}, {{fencer.rank}}, рейтинг {{fencer.rate}}
       </li>
       {% endfor %}
 
@@ -49,13 +49,7 @@
             <li>Елены Стасовой 69/л</li>
             <li>60 лет образования СССР, 17</li>
         </ul>
-        <div class="search">
-            <form>
-            <input type="text" placeholder="Поиск по сайту">
-            <button type="submit"></button>
-            </form>
-          </div>
-    </div>
+     </div>
 </div>
 <div class="footer">
     <table>
